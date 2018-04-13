@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-add-buttons',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-buttons.component.css']
 })
 export class AddButtonsComponent implements OnInit {
+  @Output() add = new EventEmitter<object>();
+
+  addToFirstNumber : number;
+  addToSecondNumber : number;
+
 
   constructor() { }
 

@@ -1,3 +1,19 @@
-<p>
-  add-buttons works!
-</p>
+<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && addToFirstNumberField.errors}">
+    <label>Add to first number</label>
+    <input type="number" name="addToFirstNumber" [(ngModel)]="addToFirstNumber" #addToFirstNumberField="ngModel" required [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && addToFirstNumberField.errors">
+      <p *ngIf="addToFirstNumberField.errors.required" class="validation">A number is required</p>
+    </div>
+  </div>
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && addToSecondNumberField.errors}">
+    <label>Add to second number</label>
+    <input type="number" name="addToSecondNumber" [(ngModel)]="addToSecondNumber" #addToSecondNumberField="ngModel"  [disabled]="processing"/>
+  </div>
+  <div class="field submit">
+    <button class="btn-add-device" type="submit" [disabled]="processing">Add</button>
+    <div *ngIf="feedbackEnabled && form.invalid">
+      <p class="validation">There are errors in the form, please review the fields</p>
+    </div>
+  </div>
+</form>
