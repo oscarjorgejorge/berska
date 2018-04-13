@@ -11,7 +11,7 @@
     <input type="number" name="addToSecondNumber" [(ngModel)]="addToSecondNumber" #addToSecondNumberField="ngModel"  [disabled]="processing"/>
   </div>
   <div class="field submit">
-    <button class="btn-add-device" type="submit" [disabled]="processing">Add</button>
+    <button class="btn-add-numbers" type="submit" [disabled]="processing">Add</button>
     <div *ngIf="feedbackEnabled && form.invalid">
       <p class="validation">There are errors in the form, please review the fields</p>
     </div>

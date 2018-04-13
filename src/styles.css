@@ -72,3 +72,13 @@ p {
 .submission-completed{
   color: green;
 }
+
+.btn-add-numbers{
+  color: white;
+  background-color: green;
+  margin-bottom: 20px;
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}

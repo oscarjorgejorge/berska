@@ -21,10 +21,6 @@ form input {
   font-size: 16px;
 }
 
-submit {
-  align-items: center;
-}
-
 form .field.has-error label {
 	color: red;
 }

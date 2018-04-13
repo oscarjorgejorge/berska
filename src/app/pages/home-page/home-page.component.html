@@ -1,9 +1,12 @@
 <h2>Add Numbers</h2>
 
-<app-results [numbersToBeAdded]="numbersToBeAdded"></app-results>
+<!-- <app-results [numbersToBeAdded]="numbersToBeAdded"></app-results> -->
+<p>
+  The total of the first number is {{firstNumber}} and the second number is {{secondNumber}}
+</p>
 
 <app-add-buttons (add)="addNumbers($event)"></app-add-buttons>
 
 <div *ngIf="goodFeedbackEnabled">
-  <p class="submission-completed">Thank you, your device has been added</p>
+  <p class="submission-completed">Thank you, your numbers have been added</p>
 </div>

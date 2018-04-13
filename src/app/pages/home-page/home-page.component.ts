@@ -6,16 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-  numbersToBeAdded : any;
-
-  constructor() { }
-
   goodFeedbackEnabled: boolean;
 
+  firstNumber : number;
+  secondNumber: number;
+
+  constructor() { }
 
   // --- The function sets the values of the propiety of the class
   ngOnInit() {
     this.goodFeedbackEnabled = false;
+    this.firstNumber = 0;
+    this.secondNumber = 0;
   }
 
   // --- The function changes the property value and allow the confirmation that the form has been completed correctly.
@@ -27,7 +29,8 @@ export class HomePageComponent implements OnInit {
     this.goodFeedbackEnabled = false;
   }, 4000);
 
-  // --- Adding the new device to the devices array.
-  this.numbersToBeAdded = newNumbers;
+  // --- Adding the new numbers.
+  this.firstNumber += newNumbers.addToFirstNumber;
+  this.secondNumber += newNumbers.addToSecondNumber;
   }
 }

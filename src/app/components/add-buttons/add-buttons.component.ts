@@ -30,6 +30,12 @@ export class AddButtonsComponent implements OnInit {
     this.feedbackEnabled = true;
     if (form.valid) {
       this.processing = true;
+
+      // --- The function reset the value of "processing" after 3secs. to allow new submissions. 
+      setTimeout(() => {
+        this.processing = false;
+      }, 3000);
+
       const data = {
         addToFirstNumber : this.addToFirstNumber,
         addToSecondNumber : this.addToSecondNumber
