@@ -1,5 +1,9 @@
 <h2>Add Numbers</h2>
 
-<app-results></app-results>
+<app-results [numbersToBeAdded]="numbersToBeAdded"></app-results>
 
-<app-add-buttons></app-add-buttons>
+<app-add-buttons (add)="addNumbers($event)"></app-add-buttons>
+
+<div *ngIf="goodFeedbackEnabled">
+  <p class="submission-completed">Thank you, your device has been added</p>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsComponent implements OnInit {
 
+  @Input() numbersToBeAdded: any;
+
+  firstNumber: number;
+  secondNumber: number;
+
   constructor() { }
 
   ngOnInit() {
+    this.firstNumber = 0;
+    this.secondNumber = 0;
   }
 
 }

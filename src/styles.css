@@ -68,3 +68,7 @@ p {
 }
 
 /* ---- components ---- */
+
+.submission-completed{
+  color: green;
+}
